@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "929913233077",
+    "firebase_url": "https://dimension-8101c-default-rtdb.firebaseio.com",
+    "project_id": "dimension-8101c",
+    "storage_bucket": "dimension-8101c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929913233077:android:c8f16558743f506df5e8fc",
+        "android_client_info": {
+          "package_name": "com.dimension.a3dimension"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNYr4CmGvhduAMOsp-LZ0pSMI2QzpDu7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

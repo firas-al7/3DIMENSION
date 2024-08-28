@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundTest"
+    tools:context="com.dimension.a3dimension.SettingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarLayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbarSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.AppBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/toolbarTitleSetting"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/teal_700"
+                    tools:text="Settings"
+                    android:textSize="@dimen/toolbar_title_size" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/bluetooth_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/bluetooth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bluetooth_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bluetooth"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/bluetooth_sub_header"
+            app:layout_constraintStart_toEndOf="@id/bluetooth_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/bluetooth_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Receive Data Via Bluetooth"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/bluetooth_header"
+            app:layout_constraintTop_toBottomOf="@+id/bluetooth_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/otg_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/usb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/otg_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="OTG"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/otg_sub_header"
+            app:layout_constraintStart_toEndOf="@id/otg_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/otg_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Receive Data Via OTG Cable"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/otg_header"
+            app:layout_constraintTop_toBottomOf="@+id/otg_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/startup_screen_card_background"
+        android:paddingVertical="24dp">
+
+        <ImageView
+            android:id="@+id/wifi_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/wifi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wifi_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="WIFI"
+            android:textColor="#47BDE6"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/wifi_sub_header"
+            app:layout_constraintStart_toEndOf="@id/wifi_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/wifi_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Recieve Data Via WIFI"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/wifi_header"
+            app:layout_constraintTop_toBottomOf="@+id/wifi_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/user_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Account"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/user_sub_header"
+            app:layout_constraintStart_toEndOf="@id/user_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/user_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Change Username And Password"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/user_header"
+            app:layout_constraintTop_toBottomOf="@+id/user_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/setting_return"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="40dp"
+
+        android:backgroundTint="@color/buttonColor"
+        android:src="@drawable/ic_return"
+        app:tint="@color/white" />
+</LinearLayout>

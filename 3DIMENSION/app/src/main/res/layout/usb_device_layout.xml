@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/button_ripple"
+    android:gravity="center_vertical"
+    android:id="@+id/linearLayoutUsbInfo">
+
+    <ImageView
+        android:id="@+id/usbStatus"
+        android:layout_width="10dp"
+        android:layout_height="70dp"
+        android:background="#4C5156"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="start"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/usbDeviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:text="Usb Device Name"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:gravity="center_vertical"/>
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="16dp"
+            android:background="#4C5156" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtusbProductId"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Product Id :"
+                android:textColor="#47BDE6"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:id="@+id/txtusbVendorId"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Vendor Id :"
+                android:textColor="#47BDE6"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/txtusbProductId"/>
+            <TextView
+                android:id="@+id/usbProductId"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Product Id"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+               android:layout_toRightOf="@+id/txtusbProductId"/>
+            <TextView
+                android:id="@+id/usbVendorId"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Vendor Id"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/txtusbVendorId"
+                android:layout_below="@+id/txtusbProductId"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

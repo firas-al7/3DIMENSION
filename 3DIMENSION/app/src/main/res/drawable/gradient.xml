@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:src="@drawable/button_bg" />
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#ff51515a" />
+            <corners android:radius="@dimen/_5ssp" />
+            <stroke android:width="@dimen/_3ssp" android:color="@android:color/white" />
+        </shape>
+    </item>
+</layer-list>

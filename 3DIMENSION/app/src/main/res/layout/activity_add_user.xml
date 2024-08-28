@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTest"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".users.AddUserActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_menu_header"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/cardBackgroundTest">
+
+        <ImageView
+            android:paddingTop="16dp"
+            android:id="@+id/login_activity_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/logo"  />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_accent" />
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="32dp">
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="32dp"
+        android:id="@+id/sign_up_icon"
+        android:src="@drawable/sign_up"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_up_icon"
+        android:id="@+id/hello_text"
+        android:orientation="vertical">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello."
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="@color/black"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New User"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_layout"
+        android:layout_below="@id/hello_text"
+        android:layout_marginVertical="32dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_username"
+            android:inputType="text"
+            android:hint="Username"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:id="@+id/add_userPassword"
+                android:textSize="20dp"
+                android:padding="16dp"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+       <!-- <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_userPassword"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            />-->
+
+        <!--<EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirm_password_edit_text"
+            android:inputType="textPassword"
+            android:hint="Confirm Password"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_corner"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/create_account_btn"
+            android:layout_height="64dp"
+            android:text="Create Account"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            />
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/form_layout"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:id="@+id/cancel_addUser_btn"
+            android:layout_height="64dp"
+            android:text="Cancel"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.dimension.a3dimension.MainActivity2">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarLayout"
+        android:background="@color/cardBackgroundTest">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.AppBar"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                >
+
+
+                <TextView
+                    android:id="@+id/toolbarTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/teal_700"
+                    tools:text="Other"
+                    android:textSize="@dimen/toolbar_title_size" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/viewScan_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/viewscan"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewScan_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="View Scan"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewScan_sub_header"
+            app:layout_constraintStart_toEndOf="@id/viewScan_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/viewScan_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Saved Scans Visualization"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/viewScan_header"
+            app:layout_constraintTop_toBottomOf="@+id/viewScan_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tutoriel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/tutoriel_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/tutoriel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tutoriel_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="How To Use"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/tutoriel_sub_header"
+            app:layout_constraintStart_toEndOf="@id/tutoriel_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tutoriel_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Watch A Tutorial"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tutoriel_header"
+            app:layout_constraintTop_toBottomOf="@+id/tutoriel_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/setting_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/setting"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/setting_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Settings"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/setting_sub_header"
+            app:layout_constraintStart_toEndOf="@id/setting_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/setting_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Connections And Account Settings"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/setting_header"
+            app:layout_constraintTop_toBottomOf="@+id/setting_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/users"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_ripple"
+        android:paddingVertical="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:stateListAnimator="@animator/button_elevation_animator">
+
+        <ImageView
+            android:id="@+id/users_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/users_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/users_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Users"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/users_sub_header"
+            app:layout_constraintStart_toEndOf="@id/users_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/users_sub_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Manage Users "
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/users_header"
+            app:layout_constraintTop_toBottomOf="@+id/users_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/other_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+android:visibility="gone"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="40dp"
+
+        android:backgroundTint="@color/buttonColor"
+        android:src="@drawable/ic_return"
+        app:tint="@color/white" />
+</LinearLayout>

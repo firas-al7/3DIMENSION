@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundTest"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".users.UserActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarLayout"
+        android:background="@color/cardBackgroundTest">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.AppBar"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                >
+
+
+                <TextView
+                    android:id="@+id/toolbarTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/teal_700"
+                    tools:text="Account"
+                    android:textSize="@dimen/toolbar_title_size" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <View
+
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_accent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="32dp"
+        >
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="10dp"
+            android:id="@+id/login_icon"
+            android:src="@drawable/sign_up"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_icon"
+            android:id="@+id/hello_text"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/form_layout"
+            android:layout_below="@id/hello_text"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Username"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_marginTop="12dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/username_account"
+                android:inputType="textEmailAddress"
+                android:hint="Username"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_corner"
+                android:padding="16dp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Password"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_marginTop="12dp"
+                />
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_account"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_corner"
+                android:padding="16dp"
+
+                />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:background="@color/transparent"
+
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner"
+                android:id="@+id/password_account"
+                android:textSize="20dp"
+                android:padding="16dp"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/transparent"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:id="@+id/confirm_password_account"
+                    android:textSize="20dp"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_corner"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--<EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirm_password_account"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_corner"
+                android:padding="16dp"
+                android:layout_marginTop="12dp"
+                />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/form_layout"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/confirm_account_button"
+                    android:layout_height="64dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Update"
+
+                    android:textSize="16sp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/cancel_account_button"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="64dp"
+                    android:text="Cancel"
+
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="24dp"
+                android:layout_height="64dp"
+                android:id="@+id/progress_bar"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/form_layout"
+             android:orientation="horizontal"
+             android:gravity="center">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Update Account Needs: "/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textStyle="bold"
+                 android:id="@+id/create_account_text_view_btn"
+                 android:text="Internet connection"/>
+
+         </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

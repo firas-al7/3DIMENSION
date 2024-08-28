@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundTest"
+    tools:context="com.dimension.a3dimension.OtgSettingActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarLayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbarOtgSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.AppBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/toolbarTitleOtgSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/teal_700"
+                    tools:text="OTG Settings"
+                    android:textSize="@dimen/toolbar_title_size" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/sort_drop_down_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="11dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/otgText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:textColor="@color/shadeOfBlue2"
+            android:textSize="16sp"
+            android:text="Turn On The OTG" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/otgSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4C5156" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/shadeOfBlue2"
+        android:layout_margin="11dp"
+        android:textSize="14sp"
+        android:gravity="start|bottom"
+        android:text="Connected Devices" />
+
+    <ListView
+        android:id="@+id/usbDevicesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="15dp"
+        android:visibility="visible"
+        tools:listitem="@layout/usb_device_layout" />
+
+    <TextView
+        android:id="@+id/txtnoUsbDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="#47BDE6"
+        android:text="No connected Devices"
+        android:background="@drawable/bottom_list_item_selector"
+        android:visibility="gone"
+        android:gravity="center_vertical"/>
+
+
+
+
+</LinearLayout>

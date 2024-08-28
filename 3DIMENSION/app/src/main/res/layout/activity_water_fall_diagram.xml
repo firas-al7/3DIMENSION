@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/main_2d_surface"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="@dimen/_10ssp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2d_surface_StartStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@+id/btn_return_waterfall" android:background="@drawable/button_selector" android:focusable="true" android:clickable="true" android:layout_width="@dimen/_65ssp" android:layout_height="@dimen/_35ssp" android:src="@drawable/ic_return" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Return" />
+    <Button
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_2d_surface_StartStop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10ssp"
+        android:layout_marginRight="@dimen/_10ssp"
+        android:layout_marginBottom="@dimen/_10ssp"
+        android:background="@drawable/button_selector"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2d_surface_Finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_2d_surface_Finish"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10ssp"
+        android:layout_marginRight="@dimen/_10ssp"
+        android:layout_marginBottom="@dimen/_10ssp"
+        android:background="@drawable/button_selector"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
